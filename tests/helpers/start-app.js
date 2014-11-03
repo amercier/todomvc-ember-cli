@@ -3,6 +3,10 @@ import Application from '../../app';
 import Router from '../../router';
 import config from '../../config/environment';
 
+// TODO: import all fixtures
+import TodoFixtures from '../fixtures/todo';
+import Todo from '../../models/todo';
+
 export default function startApp(attrs) {
   var App;
 
@@ -17,6 +21,10 @@ export default function startApp(attrs) {
     App = Application.create(attributes);
     App.setupForTesting();
     App.injectTestHelpers();
+
+    Todo.reopenClass({
+      FIXTURES: $.extend(true, [], TodoFixtures) // extend, otherwise the TodoFixtures gets mutated
+    });
   });
 
   App.reset(); // this shouldn't be needed, i want to be able to "start an app at a specific URL"

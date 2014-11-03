@@ -4,20 +4,17 @@ import startApp from './start-app';
 /**
  * Setups an app for integration testing
  */
+export default function moduleForIntegration (name) {
+  var container = {};
 
-var container = {};
+  module(name, {
+    setup: function setup() {
+      container.App = startApp();
+    },
+    teardown: function teardown() {
+      Ember.run(container.App, 'destroy');
+    }
+  });
 
-var config = {
-  setup: function() {
-    container.App = startApp();
-  },
-  teardown: function() {
-    Ember.run(container.App, 'destroy');
-  }
-};
-
-function moduleForIntegation (name) {
-  return module(name, config);
+  return container;
 }
-
-export { container, config, moduleForIntegation };
