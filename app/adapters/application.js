@@ -1,5 +1,8 @@
+import Ember from 'ember';
 import DS from 'ember-data';
 
-export default DS.LSAdapter.extend({
+var adapter = Ember.testing ? DS.FixtureAdapter : DS.LSAdapter.extend({
   namespace: 'todos-ember-es6'
 });
+
+export default adapter;
