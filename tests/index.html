@@ -14,8 +14,11 @@
     <link rel="stylesheet" href="assets/tutorial-ember-todomvc-embercli.css">
     <link rel="stylesheet" href="assets/test-support.css">
     <style>
+      body {
+        width: auto;
+      }
       #ember-testing-container {
-        position: absolute;
+        position: fixed;
         background: white;
         bottom: 0;
         right: 0;
@@ -23,10 +26,28 @@
         height: 384px;
         overflow: auto;
         z-index: 9999;
-        border: 1px solid #ccc;
+        border: 1px solid rgba(0,0,0,0.3);
+        opacity: 0.5;
+        margin: 5px;
       }
+
+      #ember-testing-container::before {
+        position: absolute;
+        top: 0;
+        left: 0;
+        background: rgba(0,0,0,0.3);
+        content: 'Application';
+        display: block;
+        padding: .2em .5em;
+      }
+
       #ember-testing {
         zoom: 50%;
+      }
+
+      #__testem_ui__ {
+        border: none;
+        margin: 1px;
       }
     </style>
   </head>
