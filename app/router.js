@@ -9,6 +9,7 @@ Router.map(function() {
   this.resource('todos', { path: '/' }, function() {
     // additional child routes will go here later
   });
+  this.route('todos/active');
 });
 
 export default Router;
