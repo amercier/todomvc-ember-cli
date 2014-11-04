@@ -74,3 +74,19 @@ test('acceptChanges with an empty title', function() {
     equal(model.get('saved'), true);
   });
 });
+
+
+test('removeTodo', function() {
+  expect(2);
+  var controller = this.subject();
+  Ember.run(function() {
+    var model = mockModel(FIXTURES[0]);
+    controller.set('model', model);
+
+    controller.send('removeTodo');
+
+    equal(model.get('deleted'), true);
+    equal(model.get('saved'), true);
+  });
+});
+
