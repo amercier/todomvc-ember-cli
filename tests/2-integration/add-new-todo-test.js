@@ -3,7 +3,7 @@ import moduleForIntegration from '../helpers/module-for-integration';
 import delay from '../helpers/delay';
 import Fixtures from '../fixtures/todo';
 
-var ms = 500;
+var ms = 0;
 
 moduleForIntegration('Integration - Add a new todo');
 

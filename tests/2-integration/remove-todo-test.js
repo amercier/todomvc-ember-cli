@@ -3,7 +3,7 @@ import moduleForIntegration from '../helpers/module-for-integration';
 import delay from '../helpers/delay';
 import Fixtures from '../fixtures/todo';
 
-var ms = 500, App;
+var ms = 0, App;
 
 moduleForIntegration('Integration - Remove a todo');
 
