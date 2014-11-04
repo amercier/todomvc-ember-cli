@@ -12,7 +12,9 @@ export default function moduleForIntegration (name) {
       container.App = startApp();
     },
     teardown: function teardown() {
-      Ember.run(container.App, 'destroy');
+      Ember.run(function() {
+        container.App.destroy();
+      });
     }
   });
 

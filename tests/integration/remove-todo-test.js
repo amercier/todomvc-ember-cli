@@ -1,11 +1,12 @@
 import Ember from 'ember';
-import moduleForIntegation from '../helpers/module-for-integration';
+import moduleForIntegration from '../helpers/module-for-integration';
 import delay from '../helpers/delay';
 import Fixtures from '../fixtures/todo';
 
-moduleForIntegation('Integration - Remove a todo');
+var ms = 500, App;
 
-var ms = 0;
+moduleForIntegration('Integration - Remove a todo');
+
 
 asyncTest('Application fixtures are initialized', function() {
   expect(4);
@@ -22,7 +23,7 @@ asyncTest('Application fixtures are initialized', function() {
 
 
 asyncTest('Typing a todo name and pressing ENTER adds a new todo', function() {
-  expect(2);
+  expect(3);
 
   var text = 'My new awesome todo';
 
@@ -36,6 +37,6 @@ asyncTest('Typing a todo name and pressing ENTER adds a new todo', function() {
       equal(find('#main > ul > li').size(), Fixtures.length - 1);
       equal(find('#main > ul > li:nth-of-type(1) label').text(), Fixtures[0].title);
       equal(find('#main > ul > li:nth-of-type(2) label').text(), Fixtures[2].title);
-      start();
+      start(); // see http://api.qunitjs.com/QUnit.asyncTest/
     });
 });
