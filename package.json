@@ -1,4 +1,6 @@
 {
+  "name": "tutorial-ember-todomvc-embercli",
+  "version": "0.0.0",
   "private": true,
   "directories": {
     "doc": "doc",
