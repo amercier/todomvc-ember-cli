@@ -1,5 +1,7 @@
 # Tutorial-ember-todomvc-embercli
 
+[![Build Status](http://img.shields.io/travis/amercier/todomvc-ember-cli/master.svg?style=flat-square)](https://travis-ci.org/amercier/todomvc-ember-cli)
+
 This README outlines the details of collaborating on this Ember application.
 
 A short introduction of this app could easily go here.
