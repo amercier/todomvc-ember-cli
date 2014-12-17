@@ -1,5 +1,5 @@
 {
-  "name": "tutorial-ember-todomvc-embercli",
+  "name": "todomvc-ember-cli",
   "dependencies": {
     "handlebars": "2.0.0",
     "jquery": "1.11.1",

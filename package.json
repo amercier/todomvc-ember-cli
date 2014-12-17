@@ -1,5 +1,5 @@
 {
-  "name": "tutorial-ember-todomvc-embercli",
+  "name": "todomvc-ember-cli",
   "version": "0.0.0",
   "private": true,
   "directories": {
@@ -11,7 +11,7 @@
     "build": "./node_modules/.bin/ember build",
     "test": "./node_modules/.bin/ember test"
   },
-  "repository": "https://github.com/stefanpenner/ember-cli",
+  "repository": "https://github.com/amercier/todomvc-ember-cli",
   "engines": {
     "node": ">= 0.10.0"
   },
