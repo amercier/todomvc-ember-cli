@@ -7,6 +7,7 @@ todomvc-ember-cli
 using [Ember CLI](http://www.ember-cli.com/).
 
 The application includes:
+
 ✓ Ember templates  
 ✗ (not implemented yet) Ember components  
 ✓ Unit and end-to-end tests using [QUnit](http://qunitjs.com/) and [Testem](https://github.com/airportyh/testem)  
