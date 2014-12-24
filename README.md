@@ -16,7 +16,7 @@ The application includes:
 Installation
 ------------
 
-#### Prerequisites
+### Prerequisites
 
 You will need the following things properly installed on your computer:
 - [Git](http://git-scm.com/)
