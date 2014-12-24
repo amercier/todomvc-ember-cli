@@ -27,22 +27,21 @@ You will need the following things properly installed on your computer:
 - `git clone <repository-url>` this repository
 - change into the new directory
 - `npm install`
-- `bower install`
 
 ### Running / Development
 
-- `ember server`
+- `npm run start`
 - Visit your app at http://localhost:4200.
 
 ### Running Tests
 
-- `ember test`
-- `ember test --server`
+- `npm test`
+- `npm run test-server`
 
 ### Building
 
-- `ember build` (development)
-- `ember build --environment production` (production)
+- `npm run build` (production)
+- `npm run build-dev` (development)
 
 ### Further Reading / Useful Links
 
