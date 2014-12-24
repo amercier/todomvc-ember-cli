@@ -1,8 +1,6 @@
 todomvc-ember-cli
 =================
 
-[![Build Status](http://img.shields.io/travis/amercier/todomvc-ember-cli/master.svg?style=flat-square)](https://travis-ci.org/amercier/todomvc-ember-cli)
-
 [TodoMVC](http://todomvc.com/) application, written in [Ember.js](http://emberjs.com/)
 using [Ember CLI](http://www.ember-cli.com/).
 
@@ -11,7 +9,7 @@ The application includes:
 ✓ Ember templates  
 ✗ (not implemented yet) Ember components  
 ✓ Unit and end-to-end tests using [QUnit](http://qunitjs.com/) and [Testem](https://github.com/airportyh/testem)  
-✓ Continuous Integration setup with [Travis CI](https://travis-ci.org/)  
+✓ Continuous Integration setup with [Travis CI](https://travis-ci.org/) [![Build Status](http://img.shields.io/travis/amercier/todomvc-ember-cli/master.svg?style=flat-square)](https://travis-ci.org/amercier/todomvc-ember-cli)  
 ✗ (not implemented yet) Code coverage analysis with [Istanbul](http://gotwarlost.github.io/istanbul/)  
 
 
