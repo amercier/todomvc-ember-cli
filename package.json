@@ -1,11 +1,6 @@
 {
   "name": "todomvc-ember-cli",
-  "version": "0.0.0",
   "private": true,
-  "directories": {
-    "doc": "doc",
-    "test": "tests"
-  },
   "scripts": {
     "start": "ember server",
     "build": "ember build --environment production",
@@ -14,12 +9,6 @@
     "test-server": "ember test --server",
     "install": "bower install"
   },
-  "repository": "https://github.com/amercier/todomvc-ember-cli",
-  "engines": {
-    "node": ">= 0.10.0"
-  },
-  "author": "",
-  "license": "MIT",
   "devDependencies": {
     "body-parser": "1.10.0",
     "bower": "1.3.12",
