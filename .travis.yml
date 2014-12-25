@@ -1,15 +1,9 @@
----
 language: node_js
-
 sudo: false
-
 cache:
   directories:
     - node_modules
-
 install:
   - npm install
-  - ./node_modules/.bin/bower install
-
 script:
   - npm test
