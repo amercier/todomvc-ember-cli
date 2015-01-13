@@ -2,8 +2,8 @@ todomvc-ember-cli
 =================
 
 [![Build Status](http://img.shields.io/travis/amercier/todomvc-ember-cli/master.svg?style=flat-square)](https://travis-ci.org/amercier/todomvc-ember-cli)
-[![Dependencies](https://img.shields.io/david/amercier/todomvc-ember-cli.svg?style=flat-square)](https://david-dm.org/amercier/todomvc-ember-cli#info=dependencies&view=table)
-[![DevDependencies](https://img.shields.io/david/dev/amercier/todomvc-ember-cli.svg?style=flat-square)](https://david-dm.org/amercier/todomvc-ember-cli#info=devDependencies&view=table)
+[![Dependency Status](https://www.versioneye.com/user/projects/54b57549050646ca5c00008f/badge.svg?style=flat-square)](https://www.versioneye.com/user/projects/54b57549050646ca5c00008f)
+[![Dependency Status](https://www.versioneye.com/user/projects/54b57555050646e16d00009a/badge.svg?style=flat-square)](https://www.versioneye.com/user/projects/54b57555050646e16d00009a)
 [![Code Climate](https://img.shields.io/codeclimate/github/amercier/todomvc-ember-cli.svg?style=flat-square)](https://codeclimate.com/github/amercier/todomvc-ember-cli)
 
 [TodoMVC](http://todomvc.com/) application, written in [Ember.js](http://emberjs.com/)
