@@ -18,10 +18,10 @@ The application includes:
 ✗ (not implemented yet) Code coverage analysis with [Istanbul](http://gotwarlost.github.io/istanbul/)  
 
 
-Live Examples
--------------
+Live demo
+---------
 
-[Demo](http://amercier.github.io/todomvc-ember-cli/)  
+[App](http://amercier.github.io/todomvc-ember-cli/)  
 [Tests](http://amercier.github.io/todomvc-ember-cli/tests/)  
 
 
