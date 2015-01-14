@@ -8,3 +8,10 @@ install:
   - npm install
 script:
   - npm test
+after_success:
+  - test $TRAVIS_BRANCH == master && ./build.sh dist
+  - test $TRAVIS_BRANCH == master && ./deploy.sh dist /todomvc-ember-cli
+env:
+  global:
+    - GH_REF=github.com/amercier/todomvc-ember-cli.git
+    - secure: "MxJ1skvAEWjJ8UrnjyY/reD+c22bIJnJ/qkpskhXjMD+6/0IaOR89tkx66zJYzAETL4IsroORZO0LZiG52Uplhc66l9h4UjEsJ3zIxImb9WBLW0uTs4M8SbYaj1w80e3/BQVRPfonq10K9EEAzf0cwtWw3OzVzn895kE9UIhs0Q="
