@@ -1,8 +1,8 @@
 import Ember from 'ember';
 import {
-  moduleFor,
-  test
+  moduleFor
 } from 'ember-qunit';
+import QUnit from 'qunit';
 import FIXTURES from '../../fixtures/todo';
 
 
@@ -21,63 +21,64 @@ function mockModel(data) {
 
 
 moduleFor('controller:todo', 'TodoController', {
-  // Specify the other units that are required for this test.
+  // Specify the other units that are required for this QUnit.test.
   needs: ['model:todo']
 });
 
-// Replace this with your real tests.
-test('it exists', function() {
+// Replace this with your real QUnit.tests.
+QUnit.test('it exists', function(assert) {
+  assert.expect(1);
   var controller = this.subject();
-  ok(controller);
+  assert.ok(controller);
 });
 
-test('editTodo', function() {
+QUnit.test('editTodo', function(assert) {
   var controller = this.subject();
   Ember.run(function() {
     controller.send('editTodo');
-    equal(controller.get('isEditing'), true);
+    assert.equal(controller.get('isEditing'), true);
   });
 });
 
-test('acceptChanges with a title', function() {
-  expect(4);
+QUnit.test('acceptChanges with a title', function(assert) {
+  assert.expect(4);
   var controller = this.subject();
   Ember.run(function() {
     var model = mockModel(FIXTURES[0]);
     controller.set('model', model);
 
     controller.send('editTodo');
-    equal(controller.get('isEditing'), true);
+    assert.equal(controller.get('isEditing'), true);
     model.set('title', FIXTURES[1].title);
     controller.send('acceptChanges');
-    equal(controller.get('isEditing'), false);
+    assert.equal(controller.get('isEditing'), false);
 
-    equal(model.get('deleted'), false);
-    equal(model.get('saved'), true);
+    assert.equal(model.get('deleted'), false);
+    assert.equal(model.get('saved'), true);
   });
 });
 
-test('acceptChanges with an empty title', function() {
-  expect(4);
+QUnit.test('acceptChanges with an empty title', function(assert) {
+  assert.expect(4);
   var controller = this.subject();
   Ember.run(function() {
     var model = mockModel(FIXTURES[0]);
     controller.set('model', model);
 
     controller.send('editTodo');
-    equal(controller.get('isEditing'), true);
+    assert.equal(controller.get('isEditing'), true);
     model.set('title', '');
     controller.send('acceptChanges');
-    equal(controller.get('isEditing'), false);
+    assert.equal(controller.get('isEditing'), false);
 
-    equal(model.get('deleted'), true);
-    equal(model.get('saved'), true);
+    assert.equal(model.get('deleted'), true);
+    assert.equal(model.get('saved'), true);
   });
 });
 
 
-test('removeTodo', function() {
-  expect(2);
+QUnit.test('removeTodo', function(assert) {
+  assert.expect(2);
   var controller = this.subject();
   Ember.run(function() {
     var model = mockModel(FIXTURES[0]);
@@ -85,8 +86,8 @@ test('removeTodo', function() {
 
     controller.send('removeTodo');
 
-    equal(model.get('deleted'), true);
-    equal(model.get('saved'), true);
+    assert.equal(model.get('deleted'), true);
+    assert.equal(model.get('saved'), true);
   });
 });
 

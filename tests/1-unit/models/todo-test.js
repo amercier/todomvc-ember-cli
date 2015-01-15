@@ -13,28 +13,31 @@ moduleForModel('todo', 'Todo', {
   }
 });
 
-test('it exists', function() {
+test('it exists', function(assert) {
+  assert.expect(1);
   var model = this.subject();
   // var store = this.store();
-  ok(!!model);
+  assert.ok(!!model);
 });
 
-test('it has a title property', function() {
+test('it has a title property', function(assert) {
+  assert.expect(3);
   var model = this.subject(FIXTURES[0]);
-  equal(typeof model.get('title'), 'string');
+  assert.equal(typeof model.get('title'), 'string');
   Ember.run(function() {
     model.set('title', 'new title');
-    equal(model.get('title'), 'new title');
+    assert.equal(model.get('title'), 'new title');
   });
 });
 
-test('it has a isCompleted property', function() {
+test('it has a isCompleted property', function(assert) {
+  assert.expect(3);
   var model = this.subject(FIXTURES[1]);
   Ember.run(function() {
-    equal(typeof model.get('isCompleted'), 'boolean');
+    assert.equal(typeof model.get('isCompleted'), 'boolean');
     model.set('isCompleted', true);
-    equal(model.get('isCompleted'), true);
+    assert.equal(model.get('isCompleted'), true);
     model.set('isCompleted', false);
-    equal(model.get('isCompleted'), false);
+    assert.equal(model.get('isCompleted'), false);
   });
 });
