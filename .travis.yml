@@ -1,17 +1,13 @@
-language: node_js
 sudo: false
+language: node_js
 cache:
   directories:
-    - bower_components
-    - node_modules
-install:
-  - npm install
-script:
-  - npm test
-after_success:
-  - test $TRAVIS_BRANCH == master && ./build.sh dist /todomvc-ember-cli
-  - test $TRAVIS_BRANCH == master && ./deploy.sh dist
+  - bower_components
+  - node_modules
 env:
   global:
-    - GH_REF=github.com/amercier/todomvc-ember-cli.git
-    - secure: "MxJ1skvAEWjJ8UrnjyY/reD+c22bIJnJ/qkpskhXjMD+6/0IaOR89tkx66zJYzAETL4IsroORZO0LZiG52Uplhc66l9h4UjEsJ3zIxImb9WBLW0uTs4M8SbYaj1w80e3/BQVRPfonq10K9EEAzf0cwtWw3OzVzn895kE9UIhs0Q="
+  - GH_REF=github.com/amercier/todomvc-ember-cli.git
+  - secure: "MxJ1skvAEWjJ8UrnjyY/reD+c22bIJnJ/qkpskhXjMD+6/0IaOR89tkx66zJYzAETL4IsroORZO0LZiG52Uplhc66l9h4UjEsJ3zIxImb9WBLW0uTs4M8SbYaj1w80e3/BQVRPfonq10K9EEAzf0cwtWw3OzVzn895kE9UIhs0Q="
+after_success:
+- test "$TRAVIS_PULL_REQUEST" = "false" && test "$TRAVIS_BRANCH" = "master" && ./build.sh dist /todomvc-ember-cli || echo "Pull request. Skipping build" >&2
+- test "$TRAVIS_PULL_REQUEST" = "false" && test "$TRAVIS_BRANCH" = "master" && ./deploy.sh dist || echo "Pull request. Skipping deployment" >&2

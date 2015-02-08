@@ -2,8 +2,7 @@ todomvc-ember-cli
 =================
 
 [![Build Status](http://img.shields.io/travis/amercier/todomvc-ember-cli/master.svg?style=flat-square)](https://travis-ci.org/amercier/todomvc-ember-cli)
-[![Dependency Status](https://www.versioneye.com/user/projects/54b57549050646ca5c00008f/badge.svg?style=flat-square)](https://www.versioneye.com/user/projects/54b57549050646ca5c00008f)
-[![Dependency Status](https://www.versioneye.com/user/projects/54b57555050646e16d00009a/badge.svg?style=flat-square)](https://www.versioneye.com/user/projects/54b57555050646e16d00009a)
+[![Dependency Status](http://img.shields.io/gemnasium/amercier/todomvc-ember-cli.svg?style=flat-square)](https://gemnasium.com/amercier/todomvc-ember-cli)
 [![Code Climate](https://img.shields.io/codeclimate/github/amercier/todomvc-ember-cli.svg?style=flat-square)](https://codeclimate.com/github/amercier/todomvc-ember-cli)
 
 [TodoMVC](http://todomvc.com/) application, written in [Ember.js](http://emberjs.com/)
@@ -11,7 +10,8 @@ using [Ember CLI](http://www.ember-cli.com/).
 
 The application includes:
 
-✓ Ember templates  
+✓ Ember [v1.10](http://emberjs.com/blog/2015/02/07/ember-1-10-0-released.html)  
+✓ HTMLBars [templates](https://github.com/amercier/todomvc-ember-cli/tree/master/app/templates)  
 ✗ (not implemented yet) Ember components  
 ✓ Unit and end-to-end tests using [QUnit](http://qunitjs.com/) and [Testem](https://github.com/airportyh/testem)  
 ✓ Continuous Integration setup with [Travis CI](https://travis-ci.org/)  
@@ -21,8 +21,8 @@ The application includes:
 Live demos
 ----------
 
-[App](http://amercier.github.io/todomvc-ember-cli/)  
-[Tests](http://amercier.github.io/todomvc-ember-cli/tests/)  
+[App](http://amercier.github.io/todomvc-ember-cli/) ((development mode)[http://amercier.github.io/todomvc-ember-cli/dev/])  
+[Tests](http://amercier.github.io/todomvc-ember-cli/dev/tests/)  
 
 
 Installation
