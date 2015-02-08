@@ -3,14 +3,14 @@
     <li class="{{if todo.isCompleted 'completed'}} {{if todo.isEditing 'editing'}}">
       {{#if todo.isEditing}}
         {{input class="edit"
-                value=todo.title
+                value=todo.model.title
                 focus-out="acceptChanges"
                 insert-newline="acceptChanges"
                 autofocus="autofocus"
         }}
       {{else}}
         {{input type="checkbox" checked=todo.isCompleted class="toggle"}}
-        <label {{action "editTodo" on="doubleClick"}}>{{todo.title}}</label>
+        <label {{action "editTodo" on="doubleClick"}}>{{todo.model.title}}</label>
         <button {{action "removeTodo"}} class="destroy"></button>
       {{/if}}
     </li>
