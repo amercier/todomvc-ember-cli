@@ -12,18 +12,22 @@ fi
 
 mkdir "$1"
 
-./node_modules/.bin/ember build --output-path="$1"
+./node_modules/.bin/ember build --environment=production --output-path="$1"
+./node_modules/.bin/ember build --output-path="$1/dev"
 
 search='<base href="/" />'
-replace='<base href="'$2'/" />'
+replace1='<base href="'$2'/" />'
+replace2='<base href="'$2/dev'/" />'
 
 if [[ "$OSTYPE" == "darwin"* ]]; then
   # MacOS
-  sed -i '' -e "s#$search#$replace#" "$1/index.html"
-  sed -i '' -e "s#$search#$replace#" "$1/tests/index.html"
+  sed -i '' -e "s#$search#$replace1#" "$1/index.html"
+  sed -i '' -e "s#$search#$replace2#" "$1/dev/index.html"
+  sed -i '' -e "s#$search#$replace2#" "$1/dev/tests/index.html"
 else
-  sed -i -e "s#$search#$replace#" "$1/index.html"
-  sed -i -e "s#$search#$replace#" "$1/tests/index.html"
+  sed -i -e "s#$search#$replace1#" "$1/index.html"
+  sed -i -e "s#$search#$replace2#" "$1/dev/index.html"
+  sed -i -e "s#$search#$replace2#" "$1/dev/tests/index.html"
 fi
 
 echo " " > "$1/.nojekyll"

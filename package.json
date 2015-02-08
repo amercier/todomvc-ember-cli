@@ -3,7 +3,7 @@
   "private": true,
   "scripts": {
     "start": "ember server",
-    "build": "ember build --environment production",
+    "build": "ember build --environment=production",
     "build-dev": "ember build",
     "test": "ember test",
     "test-server": "ember test --server",
