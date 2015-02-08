@@ -21,7 +21,7 @@ The application includes:
 Live demos
 ----------
 
-[App](http://amercier.github.io/todomvc-ember-cli/) ((development mode)[http://amercier.github.io/todomvc-ember-cli/dev/])  
+[App](http://amercier.github.io/todomvc-ember-cli/) ([development mode](http://amercier.github.io/todomvc-ember-cli/dev/))  
 [Tests](http://amercier.github.io/todomvc-ember-cli/dev/tests/)  
 
 
