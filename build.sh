@@ -1,7 +1,5 @@
 #!/usr/bin/env bash
 
-DIR=dist
-
 if [ $# -ne 2 ]; then
   echo "Syntax: $0 DIR BASEURL" 2>&1
   exit 1
@@ -14,7 +12,7 @@ fi
 
 mkdir "$1"
 
-ember build --output-path="$1"
+./node_modules/.bin/ember build --output-path="$1"
 
 search='<base href="/" />'
 replace='<base href="'$2'/" />'
