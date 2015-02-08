@@ -10,7 +10,8 @@ using [Ember CLI](http://www.ember-cli.com/).
 
 The application includes:
 
-✓ Ember templates  
+✓ Ember [v1.10](http://emberjs.com/blog/2015/02/07/ember-1-10-0-released.html)  
+✓ HTMLBars [templates](https://github.com/amercier/todomvc-ember-cli/tree/master/app/templates)  
 ✗ (not implemented yet) Ember components  
 ✓ Unit and end-to-end tests using [QUnit](http://qunitjs.com/) and [Testem](https://github.com/airportyh/testem)  
 ✓ Continuous Integration setup with [Travis CI](https://travis-ci.org/)  
