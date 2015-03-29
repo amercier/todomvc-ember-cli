@@ -27,7 +27,8 @@ export default function startApp(attrs) {
     });
   });
 
-  App.reset(); // this shouldn't be needed, i want to be able to "start an app at a specific URL"
+  // Disabled due to https://github.com/emberjs/ember.js/issues/10310
+  // App.reset(); // this shouldn't be needed, i want to be able to "start an app at a specific URL"
 
   return App;
 }
