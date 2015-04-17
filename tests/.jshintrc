@@ -54,6 +54,7 @@
   "devel": false,
   "eqeqeq": true,
   "evil": true,
+  "expr": true,
   "forin": false,
   "immed": false,
   "laxbreak": false,
