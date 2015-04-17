@@ -1,3 +1,5 @@
+/* jshint expr:true */
+import { expect } from 'chai';
 import {
   describeModule,
   it

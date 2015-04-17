@@ -1,3 +1,5 @@
+/* jshint expr:true */
+import { expect } from 'chai';
 import {
   describeModel,
   it
@@ -14,7 +16,6 @@ describeModel(
     // Replace this with your real tests.
     it('exists', function() {
       var model = this.subject();
-      console.log(model);
       // var store = this.store();
       expect(model).to.be.ok;
     });
