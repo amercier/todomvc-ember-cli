@@ -4,21 +4,8 @@ import {
   test
 } from 'ember-qunit';
 import FIXTURES from '../../fixtures/todo';
+import mockModels from '../../helpers/mock-models';
 
-function mockModel(data) {
-  return data.map(function(item) {
-    return Ember.ObjectProxy.create(Ember.merge(item, {
-      saved: false,
-      save: function() {
-        this.set('saved', true);
-      },
-      deleted: false,
-      deleteRecord: function() {
-        this.set('deleted', true);
-      }
-    }));
-  });
-}
 
 moduleFor('controller:todos', 'TodosController', {
   // Specify the other units that are required for this test.
@@ -35,7 +22,7 @@ test('it exists', function() {
 test('remaining', function () {
   expect(2);
   var controller = this.subject();
-  var models = mockModel(FIXTURES);
+  var models = mockModels(FIXTURES);
   controller.addObjects(models);
   equal(controller.get('remaining'), 1);
   controller.findBy('id', '3').set('isCompleted', true);
@@ -46,7 +33,7 @@ test('remaining', function () {
 test('completed', function () {
   expect(2);
   var controller = this.subject();
-  var models = mockModel(FIXTURES);
+  var models = mockModels(FIXTURES);
   controller.addObjects(models);
   equal(controller.get('completed'), 2);
   controller.findBy('id', '3').set('isCompleted', true);
@@ -56,7 +43,7 @@ test('completed', function () {
 test('allAreDone', function() {
   expect(2);
   var controller = this.subject();
-  var models = mockModel(FIXTURES);
+  var models = mockModels(FIXTURES);
   controller.addObjects(models);
   equal(controller.get('allAreDone'), false);
   controller.findBy('id', '3').set('isCompleted', true);

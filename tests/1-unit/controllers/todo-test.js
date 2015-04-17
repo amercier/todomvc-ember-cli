@@ -4,20 +4,7 @@ import {
   test
 } from 'ember-qunit';
 import FIXTURES from '../../fixtures/todo';
-
-
-function mockModel(data) {
-  return Ember.ObjectProxy.create(Ember.merge(data, {
-    saved: false,
-    save: function() {
-      this.set('saved', true);
-    },
-    deleted: false,
-    deleteRecord: function() {
-      this.set('deleted', true);
-    }
-  }));
-}
+import mockModel from '../../helpers/mock-model';
 
 
 moduleFor('controller:todo', 'TodoController', {
