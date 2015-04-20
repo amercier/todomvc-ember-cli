@@ -1,7 +1,7 @@
 todomvc-ember-cli
 =================
 
-[![Build Status](http://img.shields.io/travis/amercier/todomvc-ember-cli/master.svg?style=flat-square)](https://travis-ci.org/amercier/todomvc-ember-cli)
+[![Build Status](http://img.shields.io/travis/amercier/todomvc-ember-cli/mocha.svg?style=flat-square)](https://travis-ci.org/amercier/todomvc-ember-cli)
 [![Dependency Status](http://img.shields.io/gemnasium/amercier/todomvc-ember-cli.svg?style=flat-square)](https://gemnasium.com/amercier/todomvc-ember-cli)
 [![Code Climate](https://img.shields.io/codeclimate/github/amercier/todomvc-ember-cli.svg?style=flat-square)](https://codeclimate.com/github/amercier/todomvc-ember-cli)
 
