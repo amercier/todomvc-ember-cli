@@ -13,7 +13,7 @@ The application includes:
 ✓ Ember [v1.11](http://emberjs.com/blog/2015/03/27/ember-1-11-0-released.html)  
 ✓ HTMLBars [templates](https://github.com/amercier/todomvc-ember-cli/tree/master/app/templates) with new bound attribute syntax  
 ✗ (not implemented yet) Ember components  
-✓ Unit and end-to-end tests using [QUnit](http://qunitjs.com/) and [Testem](https://github.com/airportyh/testem)  
+✓ Unit and end-to-end tests using [QUnit](http://qunitjs.com/) and [Testem](https://github.com/airportyh/testem). Also available with [Mocha](http://mochajs.org/): checkout [mocha branch](https://github.com/amercier/todomvc-ember-cli/tree/mocha)  
 ✓ Continuous Integration setup with [Travis CI](https://travis-ci.org/)  
 ✗ (not implemented yet) Code coverage analysis with [Istanbul](http://gotwarlost.github.io/istanbul/)  
 
