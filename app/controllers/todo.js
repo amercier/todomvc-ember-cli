@@ -23,17 +23,15 @@ export default Ember.Controller.extend({
 
   isEditing: false,
 
-  isCompleted: function(key, value){
-    var model = this.get('model');
-
-    if (value === undefined) {
-      // property being used as a getter
-      return model.get('isCompleted');
-    } else {
-      // property being used as a setter
+  isCompleted: Ember.computed('model.isCompleted', {
+    get: function() {
+      return this.get('model').get('isCompleted');
+    },
+    set: function(key, value) {
+      var model = this.get('model');
       model.set('isCompleted', value);
       model.save();
       return value;
     }
-  }.property('model.isCompleted')
+  })
 });
