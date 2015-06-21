@@ -44,14 +44,15 @@ export default Ember.ArrayController.extend({
     return this.filterBy('isCompleted', true).get('length');
   }.property('@each.isCompleted'),
 
-  allAreDone: function(key, value) {
-    if (value === undefined) {
+  allAreDone: Ember.computed('@each.isCompleted', {
+    get: function() {
       return !!this.get('length') && this.everyProperty('isCompleted', true);
-    } else {
+    },
+    set: function(key, value) {
       this.setEach('isCompleted', value);
       this.invoke('save');
       return value;
     }
-  }.property('@each.isCompleted')
+  })
 
 });
