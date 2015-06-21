@@ -1,5 +1,5 @@
-todomvc-ember-cli
-=================
+todomvc-ember-cli (Mocha)
+=========================
 
 [![Build Status](http://img.shields.io/travis/amercier/todomvc-ember-cli/mocha.svg?style=flat-square)](https://travis-ci.org/amercier/todomvc-ember-cli)
 [![Dependency Status](http://img.shields.io/gemnasium/amercier/todomvc-ember-cli.svg?style=flat-square)](https://gemnasium.com/amercier/todomvc-ember-cli)
@@ -13,7 +13,7 @@ The application includes:
 ✓ Ember [v1.12](http://emberjs.com/blog/2015/05/13/ember-1-12-released.html)  
 ✓ HTMLBars [templates](https://github.com/amercier/todomvc-ember-cli/tree/master/app/templates) with new bound attribute syntax  
 ✗ (not implemented yet) Ember components  
-✓ Unit and end-to-end tests using [QUnit](http://qunitjs.com/) and [Testem](https://github.com/airportyh/testem). Also available with [Mocha](http://mochajs.org/): checkout [mocha branch](https://github.com/amercier/todomvc-ember-cli/tree/mocha)  
+✓ Unit and end-to-end tests using [Mocha](http://mochajs.org/) and [Testem](https://github.com/airportyh/testem). Also available with [QUnit](http://qunitjs.com/): checkout [master branch](https://github.com/amercier/todomvc-ember-cli/tree/master)  
 ✓ Continuous Integration setup with [Travis CI](https://travis-ci.org/)  
 ✗ (not implemented yet) Code coverage analysis with [Istanbul](http://gotwarlost.github.io/istanbul/)  
 
