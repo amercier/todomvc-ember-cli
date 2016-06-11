@@ -1,6 +1,6 @@
 import Ember from 'ember';
 
-export default Ember.Controller.extend({
+export default Ember.Component.extend({
   actions: {
     editTodo: function() {
       this.set('isEditing', true);
@@ -20,6 +20,8 @@ export default Ember.Controller.extend({
       todo.save();
     }
   },
+
+  model: null,
 
   isEditing: false,
 

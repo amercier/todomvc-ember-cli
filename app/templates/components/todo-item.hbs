@@ -1,0 +1,15 @@
+<li class="{{if isCompleted 'completed'}} {{if isEditing 'editing'}}">
+  {{#if isEditing}}
+    {{input
+      class="edit"
+      value=model.title
+      focus-out="acceptChanges"
+      insert-newline="acceptChanges"
+      autofocus="autofocus"
+    }}
+  {{else}}
+    {{input type="checkbox" checked=isCompleted class="toggle"}}
+    <label {{action "editTodo" on="doubleClick"}}>{{model.title}}</label>
+    <button {{action "removeTodo"}} class="destroy"></button>
+  {{/if}}
+</li>
