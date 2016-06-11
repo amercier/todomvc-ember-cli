@@ -1,6 +1,6 @@
 import Ember from 'ember';
 
-export default Ember.ArrayController.extend({
+export default Ember.Controller.extend({
   actions: {
     createTodo: function() {
       // Get the todo title set by the "New Todo" text field
@@ -27,9 +27,11 @@ export default Ember.ArrayController.extend({
     }
   },
 
+  model: [],
+
   remaining: function() {
-    return this.filterBy('isCompleted', false).get('length');
-  }.property('@each.isCompleted'),
+    return this.get('model').filterBy('isCompleted', false).get('length');
+  }.property('model.@each.isCompleted'),
 
   inflection: function() {
     var remaining = this.get('remaining');
@@ -41,18 +43,17 @@ export default Ember.ArrayController.extend({
   }.property('completed'),
 
   completed: function() {
-    return this.filterBy('isCompleted', true).get('length');
-  }.property('@each.isCompleted'),
+    return this.get('model').filterBy('isCompleted', true).get('length');
+  }.property('model.@each.isCompleted'),
 
-  allAreDone: Ember.computed('@each.isCompleted', {
+  allAreDone: Ember.computed('model.@each.isCompleted', {
     get: function() {
-      return !!this.get('length') && this.everyProperty('isCompleted', true);
+      return !!this.get('model.length') && this.get('model').everyProperty('isCompleted', true);
     },
     set: function(key, value) {
-      this.setEach('isCompleted', value);
-      this.invoke('save');
+      this.get('model').setEach('isCompleted', value);
+      this.get('model').invoke('save');
       return value;
     }
   })
-
 });
